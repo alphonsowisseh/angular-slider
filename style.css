@@ -1,0 +1,39 @@
+.container {
+	width: 500px;
+	height: 200px;
+	margin: 200px auto;
+}
+
+#slider {
+	padding: 0px;
+	position: relative;
+}
+
+#slider .item {
+	list-style-type: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	-webkit-transition: linear 1s;
+	-moz-transition: linear 1s;
+	-ms-transition: linear 1s;
+	-o-transition: linear 1s;
+	transition: linear 1s;
+}
+
+
+.item.ng-enter {
+	opacity: 0;
+}
+
+.item.ng-enter-active {
+	opacity: 1;
+}
+
+.item.ng-leave {
+	opacity: 1;
+}
+
+.item.ng-leave-active {
+	opacity: 0;
+}

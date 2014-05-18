@@ -1,0 +1,22 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Slider</title>
+	<script src="js/angular.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/angular-animate.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="app">
+	<div class="container" ng-controller="SliderCtrl">		
+		<a href="" ng-click="next()">Next</a>
+		<a href="" ng-click="previous()">Previous</a>
+		<ul id="slider">
+			<li ng-repeat="image in images" class="item" ng-if="current[$index]">
+				<img ng-src={{image.link}} alt="">
+			</li>
+		</ul>
+
+	</div>
+</body>
+</html>
