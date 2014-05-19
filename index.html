@@ -9,8 +9,8 @@
 </head>
 <body ng-app="app">
 	<div class="container" ng-controller="SliderCtrl">		
-		<a href="" ng-click="next()">Next</a>
-		<a href="" ng-click="previous()">Previous</a>
+		<a href="" ng-click="next()" class="slider-nav next"> &gt;&gt;&gt; </a>
+		<a href="" ng-click="previous()" class="slider-nav prev"> &lt;&lt;&lt; </a>
 		<ul id="slider">
 			<li ng-repeat="image in images" class="item" ng-if="current[$index]">
 				<img ng-src={{image.link}} alt="">

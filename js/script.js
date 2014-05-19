@@ -55,7 +55,7 @@ app.controller('SliderCtrl', ['$scope', function($scope){
 	}
 
 	var loop = function(){
-
+		
 	}
 
 	$scope.init();

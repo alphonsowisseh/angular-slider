@@ -2,6 +2,7 @@
 	width: 500px;
 	height: 200px;
 	margin: 200px auto;
+	position: relative;
 }
 
 #slider {
@@ -36,4 +37,19 @@
 
 .item.ng-leave-active {
 	opacity: 0;
+}
+
+.slider-nav {
+	position: absolute;
+	display: inline-block;
+}
+
+.next {
+	right: -33px;
+	top: 50%;
+}
+
+.prev {
+	left: -33px;
+	top: 50%;
 }
