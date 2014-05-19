@@ -1,6 +1,6 @@
 var app = angular.module('app', ['ngAnimate']);
 
-app.controller('SliderCtrl', ['$scope', function($scope){
+app.controller('SliderCtrl', ['$scope', '$timeout', function($scope, $timeout){	
 	$scope.images = [
 		{
 			link: 'images/1.jpg'
@@ -27,19 +27,21 @@ app.controller('SliderCtrl', ['$scope', function($scope){
 	$scope.init = function(){
 		$scope.currentIndex = 0;
 		$scope.current[0] = true;
-		loop();
+		$scope.loop();
 	}
 
 	$scope.next = function(){		
 		for(var i=0; i< $scope.images.length; i++) {
 			$scope.current[i] = false;
 		}
-
+		console.log('in next');
 		$scope.currentIndex++;
+		console.log($scope.current);
 		if($scope.currentIndex == $scope.images.length) {
 			$scope.currentIndex = 0;
 		}
 		$scope.current[$scope.currentIndex] = true;
+		console.log($scope.current);
 	}
 
 	$scope.previous = function(){		
@@ -54,9 +56,24 @@ app.controller('SliderCtrl', ['$scope', function($scope){
 		$scope.current[$scope.currentIndex] = true;
 	}
 
-	var loop = function(){
-		
+	$scope.nextLoop = function(){		
+		for(var i=0; i< $scope.images.length; i++) {
+			$scope.current[i] = false;
+		}
+
+		$scope.currentIndex++;
+		if($scope.currentIndex == $scope.images.length) {
+			$scope.currentIndex = 0;
+		}
+		$scope.current[$scope.currentIndex] = true;		
+		$scope.loop();
 	}
+
+	$scope.loop = function(){
+		$timeout(function(){			
+			$scope.nextLoop();	
+		},1000);
+	};
 
 	$scope.init();
 }]);
