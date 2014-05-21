@@ -1,0 +1,46 @@
+.container {
+	width: 1170px;
+	margin: 0px auto;
+}
+
+.some-content {
+	height: 150px;
+}
+
+.slider-parent {
+	width: 980px;
+}
+
+#slides .slide {
+	float: left;
+	margin: 5px;
+	-webkit-transition: linear 1s;
+	-moz-transition: linear 1s;
+	-ms-transition: linear 1s;
+	-o-transition: linear 1s;
+	transition: linear 1s;
+}
+
+.slide img {
+	width: 320px;	
+}
+
+.slide:first-child img {
+	width: 640px;
+}
+
+/* .slide.ng-enter {
+	display: none;
+}
+
+.slide.ng-enter-active {
+	display: block;
+}
+
+.slide.ng-leave {
+	display: block;
+}
+
+.slide.ng-leave-active {
+	display: none;
+} */
